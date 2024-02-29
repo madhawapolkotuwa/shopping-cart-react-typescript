@@ -58,8 +58,8 @@ const Cart: React.FC = () => {
           }
         </ListGroup>
       </div>
-      <div className="filters cart-summary">
-        <span className="title">Subtotal ({cart.length}) items</span>
+      <div className="cart-summary">
+        <span className="cart-title">Subtotal ({cart.length}) items</span>
         <span style={{ fontWeight: 700, fontSize: 20 }}>Total: $ {total}</span>
         <Button type="button" disabled={cart.length === 0}>
           Proceed to Checkout
