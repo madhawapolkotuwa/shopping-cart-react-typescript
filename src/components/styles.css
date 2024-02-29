@@ -109,3 +109,21 @@
     flex-wrap: wrap;
     justify-content: space-around;
 }
+
+.cart-summary {
+    position: fixed;
+    z-index: 999;
+    background-color: #343a40;
+    color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    height: 93vh;
+    width: 16vw;
+    gap: 2vh;
+}
+
+.cart-title {
+    font-weight: bold;
+    font-size: 2vw;
+}
