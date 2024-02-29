@@ -20,7 +20,7 @@ const Cart: React.FC = () => {
       <div className='cart-container'>
         <ListGroup>
           {
-            cart.map((prod,index) => <ListGroup.Item style={{width:'100%', height:'15vh',display:'flex', alignItems:'center'}} key={index}>
+            cart.map((prod, index) => <ListGroup.Item style={{ width: '100%', height: '15vh', display: 'flex', alignItems: 'center' }} key={index}>
               <Row>
                 <Col md={2}><Image src={prod.thumbnail} alt={prod.title} fluid rounded /></Col>
                 <Col md={2}> <span>{prod.title}</span></Col>
