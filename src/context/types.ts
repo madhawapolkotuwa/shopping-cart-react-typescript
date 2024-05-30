@@ -16,8 +16,15 @@ export interface Product {
 export interface State {
     products: Product[];
     cart: any[] ;
-    categories: string[];
+    categories: Category[];
     count: number;
+}
+
+export interface Category
+{
+    name: string;
+    slug: string;
+    url: string;
 }
 
 export interface FilterState {
