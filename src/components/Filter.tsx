@@ -45,7 +45,9 @@ const Filter: React.FC = () => {
                         <Dropdown.Menu style={{ maxHeight: "50vh", overflowY: "auto" }}>
                             {
                                 categories.length > 0 ?
-                                    categories.map(category => <Dropdown.Item onClick={() => handleFilterCategory(category)} key={category}>{category}</Dropdown.Item>)
+                                    categories.map(category => <Dropdown.Item 
+                                                                   onClick={() => handleFilterCategory(category.slug)} 
+                                                                   key={category.name}>{category.name}</Dropdown.Item>)
                                     : <Dropdown.Item>Empty Categories</Dropdown.Item>
                             }
                         </Dropdown.Menu>
