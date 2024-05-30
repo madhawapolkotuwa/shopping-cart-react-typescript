@@ -4,7 +4,7 @@ import './styles.css';
 import { GlobalContext } from '../context/Context';
 import SingleProduct from './SingleProduct';
 import { Button } from 'react-bootstrap';
-import { Product } from '../context/types';
+import { Category, Product } from '../context/types';
 
 const Home: React.FC = () => {
 
@@ -30,8 +30,8 @@ const Home: React.FC = () => {
     try {
       const data = await fetch('https://dummyjson.com/products/categories').then(res => res.json());
       if (data) {
-        //console.log(data);
-        dispatch({ type: 'FETCH_PRODUCTS_CATEGORIES', payload: data });
+        //console.log(data as Category[]);
+        dispatch({ type: 'FETCH_PRODUCTS_CATEGORIES', payload: data as Category[] });
       }
     } catch (error) {
       console.log(error);
@@ -58,7 +58,7 @@ const Home: React.FC = () => {
   const filteredProducts = (): Product[] => {
 
     let filteredProducts = products;
-    console.log(filteredProducts);
+    //console.log(filteredProducts);
     if (sort) {
       filteredProducts = filteredProducts.sort((a, b) =>
         sort === 'lowToHigh' ? (a.price - b.price) : (b.price - a.price)
